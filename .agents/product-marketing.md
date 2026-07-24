@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v2
+**Document version:** v3
 **Last updated:** 2026-07-24
 
 ## Product Overview
@@ -8,7 +8,7 @@
 **What it does:** Sessão (individual, formato a confirmar) que usa ferramentas de reflexão profunda para ressignificar a relação da pessoa com sua sexualidade após desconexão, trauma, repressão ou mudanças naturais da vida. O foco não é o ato sexual em si, mas reconectar com sensualidade, prazer sensorial no cotidiano e expressão sexual segura.
 **Product category:** Terapia/coaching de sexualidade e bem-estar íntimo (nicho de saúde emocional e autoconhecimento corporal).
 **Product type:** Serviço — encontro/sessão prestada por profissional. Modalidade: presencial OU online, cliente escolhe.
-**Business model:** [PENDENTE — preço por sessão, pacote de sessões, ou programa; confirmar com a profissional]
+**Business model:** Venda por sessão avulsa na fase atual (valor pendente). Pacotes de sessões são plano futuro da profissional — site/copy atual não deve comprometer com "pacote"; estrutura de preço deve deixar espaço fácil para introduzir pacotes depois sem reescrever a página.
 
 ## Target Audience
 **Target companies:** N/A (B2C).
@@ -98,11 +98,12 @@ N/A — produto B2C, decisão individual. (Se houver perfis distintos — ex: mu
 | Reconexão duradoura | [PENDENTE] |
 
 ## Goals
-**Business goal:** [PENDENTE — captar leads para 1º encontro? vender pacote de sessões?]
+**Business goal:** Vender sessões avulsas agora; evoluir para pacotes de sessões futuramente (ver Business Model).
 **Conversion action:** [PENDENTE — usuário vai confirmar com a profissional; CTA da v1 do site usa placeholder "Fale comigo" (WhatsApp) até definir]
 **Current metrics:** N/A (novo projeto).
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v3 (2026-07-24) — Confirmado modelo de venda: sessão avulsa agora, pacotes futuramente. Copy/estrutura do site não deve travar em "sessão única" de forma que dificulte introduzir pacotes depois.
 - v2 (2026-07-24) — Confirmado modalidade (presencial + online); preço e CTA final seguem pendentes até usuário confirmar com a profissional.
 - v1 (2026-07-24) — Documento inicial, rascunhado a partir do brief de "Reconexão e Sexualidade" fornecido pelo usuário; vários campos de negócio (preço, conversão, provas, concorrência) pendentes de confirmação.
