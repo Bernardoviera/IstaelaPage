@@ -265,20 +265,18 @@ button:focus-visible {
 .hero-in { will-change: transform, opacity; }
 
 .hero-art { display: flex; justify-content: center; }
-.ripple-art { width: 100%; max-width: 380px; }
-.ripple {
-  fill: none;
-  stroke: var(--dourado);
-  stroke-width: 1;
-  transform-origin: 200px 200px;
-  transform-box: fill-box;
+.flame-art {
+  width: 100%;
+  max-width: 200px;
+  filter: drop-shadow(0 0 40px rgba(201, 161, 94, 0.35));
 }
-.ripple-1 { stroke-opacity: 0.75; }
-.ripple-2 { stroke-opacity: 0.45; }
-.ripple-3 { stroke-opacity: 0.22; }
+.flame-outer, .flame-inner {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
 @media (max-width: 900px) {
   .hero-art { margin-top: var(--space-xl); }
-  .ripple-art { max-width: 240px; }
+  .flame-art { max-width: 130px; }
 }
 
 /* ---------- Seção dor (dusk, continuação) ---------- */

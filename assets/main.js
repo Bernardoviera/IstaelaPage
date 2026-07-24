@@ -41,15 +41,27 @@
         .from('.hero-in-4', { opacity: 0, y: 18, duration: 0.5 }, 0.34)
         .from('.hero-in-art', { opacity: 0, scale: 0.92, duration: 0.7, ease: 'power2.out' }, 0.16);
 
-      // ---------- Ambiente: ondas respirando (loop contínuo) ----------
-      gsap.to('.ripple', {
-        scale: 1.06,
-        duration: 3.5,
+      // ---------- Ambiente: chama tremeluzindo (loop contínuo, material "fluid") ----------
+      gsap.to('.flame-outer', {
+        scaleY: 1.05,
+        scaleX: 0.96,
+        x: 2,
+        rotation: 1.2,
+        duration: 2.3,
         ease: 'sine.inOut',
-        transformOrigin: '50% 50%',
+        repeat: -1,
+        yoyo: true
+      });
+      gsap.to('.flame-inner', {
+        scaleY: 1.07,
+        scaleX: 0.94,
+        x: -1.5,
+        rotation: -1.5,
+        duration: 1.9,
+        ease: 'sine.inOut',
         repeat: -1,
         yoyo: true,
-        stagger: { each: 0.2, from: 'center' }
+        delay: 0.3
       });
 
       // ---------- Sentidos despertando — cascata ao entrar em cena ----------
