@@ -258,37 +258,12 @@ button:focus-visible {
   .hero-actions { justify-content: center; }
 }
 
-/* Entrada orquestrada do hero — motion-design skill (Premium archetype).
-   Setup → Action → Resolution: eyebrow lidera, headline é o herói (maior
-   duração), subhead e CTAs seguem, arte entra em contra-movimento suave.
-   Stagger dramático, total < 600ms do primeiro ao último início. */
-.hero-in {
-  opacity: 0;
-  transform: translateY(18px);
-  animation: hero-rise 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-.hero-in-1 { animation-delay: 0ms; animation-duration: 0.5s; }
-.hero-in-2 { animation-delay: 90ms; animation-duration: 0.65s; }
-.hero-in-3 { animation-delay: 220ms; animation-duration: 0.55s; }
-.hero-in-4 { animation-delay: 340ms; animation-duration: 0.5s; }
-.hero-in-art {
-  animation-name: hero-rise-art;
-  animation-delay: 160ms;
-  animation-duration: 0.7s;
-}
-@keyframes hero-rise {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes hero-rise-art {
-  from { opacity: 0; transform: scale(0.92); }
-  to { opacity: 1; transform: scale(1); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-in { animation: none; opacity: 1; transform: none; }
-}
+/* Entrada do hero e loop das ondas — animados via GSAP (assets/main.js),
+   não CSS. gsap.matchMedia() cuida de prefers-reduced-motion; se o script
+   falhar/for bloqueado, elementos ficam visíveis por padrão (sem FOUC-hidden
+   permanente). */
+.hero-in { will-change: transform, opacity; }
 
-/* Arte do hero — ondas concêntricas (ripple), remete a "reconexão" líquida/sensorial */
 .hero-art { display: flex; justify-content: center; }
 .ripple-art { width: 100%; max-width: 380px; }
 .ripple {
@@ -296,16 +271,11 @@ button:focus-visible {
   stroke: var(--dourado);
   stroke-width: 1;
   transform-origin: 200px 200px;
-  /* sine-based easing — ambiente contínuo, "calmo", sem paradas bruscas */
-  animation: ripple-breathe 7s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  transform-box: fill-box;
 }
-.ripple-1 { stroke-opacity: 0.75; animation-delay: 0s; }
-.ripple-2 { stroke-opacity: 0.45; animation-delay: 0.6s; }
-.ripple-3 { stroke-opacity: 0.22; animation-delay: 1.2s; }
-@keyframes ripple-breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-}
+.ripple-1 { stroke-opacity: 0.75; }
+.ripple-2 { stroke-opacity: 0.45; }
+.ripple-3 { stroke-opacity: 0.22; }
 @media (max-width: 900px) {
   .hero-art { margin-top: var(--space-xl); }
   .ripple-art { max-width: 240px; }
@@ -377,13 +347,6 @@ button:focus-visible {
   font-style: italic;
   font-size: clamp(1.3rem, 3vw, 2rem);
   color: var(--dawn-text);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.senses-list li.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* ---------- Seções claras (dawn) ---------- */
@@ -631,23 +594,9 @@ button:focus-visible {
   .sticky-cta { display: block; }
 }
 
-/* Reveal on scroll (respeitado por prefers-reduced-motion) */
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* .reveal — animado via GSAP ScrollTrigger.batch (assets/main.js).
+   Sem estado oculto em CSS: se o script falhar, conteúdo fica visível. */
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .ripple { animation: none; }
-  .reveal, .senses-list li {
-    transition: none;
-    opacity: 1;
-    transform: none;
-  }
 }
