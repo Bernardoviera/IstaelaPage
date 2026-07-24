@@ -7,16 +7,30 @@
 <meta name="description" content="Encontro individual e acolhedor para redescobrir corpo, desejo e prazer — sem roteiro, sem julgamento, no seu ritmo.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.035 0"/>
+  </filter>
+</svg>
+<div class="grain-overlay" aria-hidden="true"></div>
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="site-header">
   <div class="container">
     <span class="wordmark">reconexão</span>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#perguntas">Perguntas</a>
+      <a class="btn btn-primary btn-sm" href="#contato">Fale comigo</a>
+    </nav>
   </div>
 </header>
 
@@ -24,13 +38,23 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container hero-content">
-      <h1>Reencontre o prazer que você achou que tinha perdido</h1>
-      <p class="subhead">Um encontro individual, acolhedor e sem roteiro, pra redescobrir corpo, desejo e prazer no seu próprio ritmo — depois de um trauma, uma repressão, ou simplesmente o tempo que passou.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contato">Fale comigo</a>
-        <a class="btn btn-ghost" href="#processo">Como funciona</a>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow eyebrow-dusk">um encontro, não uma técnica</span>
+        <h1>Reencontre o prazer que você achou que tinha perdido</h1>
+        <p class="subhead">Um encontro individual, acolhedor e sem roteiro, pra redescobrir corpo, desejo e prazer no seu próprio ritmo — depois de um trauma, uma repressão, ou simplesmente o tempo que passou.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contato">Fale comigo</a>
+          <a class="btn btn-ghost" href="#processo">Como funciona</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" class="ripple-art">
+          <circle cx="200" cy="200" r="40" class="ripple ripple-1"/>
+          <circle cx="200" cy="200" r="90" class="ripple ripple-2"/>
+          <circle cx="200" cy="200" r="145" class="ripple ripple-3"/>
+          <circle cx="200" cy="200" r="14" fill="var(--dourado)" opacity="0.9"/>
+        </svg>
       </div>
     </div>
   </section>
@@ -38,12 +62,14 @@
   <!-- Dor -->
   <section class="section-dusk">
     <div class="container">
-      <span class="wick-rule" aria-hidden="true"></span>
-      <div class="prose" style="margin: 0 auto; text-align: center;">
-        <h2>Você sente que seu corpo virou só funcional?</h2>
-        <p>Um banho que já não relaxa. Um toque que não desperta nada. Dias inteiros sem sentir prazer em quase nada — nem em coisas pequenas, quanto mais em sexo.</p>
-        <p>Isso não é frigidez, não é &ldquo;falta de vontade&rdquo;, e não é definitivo. É desconexão — e ela tem causas: trauma, repressão, rotina, mudanças naturais da vida.</p>
-        <p>A maioria convive com isso em silêncio, achando que é vergonha demais pra falar sobre.</p>
+      <div class="dor-layout">
+        <span class="glyph-quote" aria-hidden="true">&ldquo;</span>
+        <div class="prose">
+          <h2>Você sente que seu corpo virou só funcional?</h2>
+          <p>Um banho que já não relaxa. Um toque que não desperta nada. Dias inteiros sem sentir prazer em quase nada — nem em coisas pequenas, quanto mais em sexo.</p>
+          <p>Isso não é frigidez, não é &ldquo;falta de vontade&rdquo;, e não é definitivo. É desconexão — e ela tem causas: trauma, repressão, rotina, mudanças naturais da vida.</p>
+          <p>A maioria convive com isso em silêncio, achando que é vergonha demais pra falar sobre.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -65,56 +91,120 @@
   <section class="section-dawn" id="beneficios">
     <div class="container">
       <div class="section-header reveal">
+        <span class="eyebrow eyebrow-dawn">a transformação</span>
         <h2>Viver com os sentidos despertos</h2>
-        <p style="color: var(--dawn-text-muted);">Depois do processo, você não vai só "melhorar sua vida sexual". Vai sentir diferença em coisas que pareciam ter perdido a graça.</p>
+        <p class="section-lede">Depois do processo, você não vai só &ldquo;melhorar sua vida sexual&rdquo;. Vai sentir diferença em coisas que pareciam ter perdido a graça.</p>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12c2-4 6-6 8-6s6 2 8 6-2 8-8 8-10-4-8-8Z"/></svg>
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M6 20c1.5-3 3.5-3 5-6s-1-5 .5-8c1 3 3.5 3 5 6s-1 5 .5 8"/>
+            <path d="M4 24c3 4 8 4 12 4s9 0 12-4"/>
+          </svg>
           <h3>Um banho que relaxa de novo</h3>
-          <p>O corpo volta a responder ao cuidado simples do dia a dia.</p>
+          <p>O corpo volta a responder ao cuidado simples do dia a dia — a água deixa de ser só higiene.</p>
         </div>
         <div class="benefit-card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>
-          <h3>O toque de uma roupa na pele</h3>
-          <p>Sensações que estavam apagadas voltam a ter presença.</p>
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M5 10c4-3 8 2 11 0s7-4 11 0"/>
+            <path d="M5 18c4-3 8 2 11 0s7-4 11 0"/>
+            <path d="M5 26c4-3 8 2 11 0s7-4 11 0"/>
+          </svg>
+          <h3>O toque de um tecido na pele</h3>
+          <p>Sensações que estavam apagadas voltam a ter presença — vestir-se deixa de ser automático.</p>
         </div>
         <div class="benefit-card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10Z"/></svg>
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M16 5c-3 4-3 7-1 9s5 1 6 4-2 6-5 6-6-2-6-5"/>
+            <circle cx="16" cy="24" r="3"/>
+          </svg>
           <h3>Sabores e aromas mais intensos</h3>
-          <p>Prazeres pequenos voltam a existir, sem esforço.</p>
+          <p>Prazeres pequenos voltam a existir, sem esforço nem "técnica" — só presença.</p>
         </div>
         <div class="benefit-card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18V6l10-2v12M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm10-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M4 16h4l3-8 4 16 3-11 3 6h7"/>
+          </svg>
           <h3>Mais segurança pra se expressar</h3>
-          <p>Dentro ou fora de uma relação, sem depender de "performar" nada.</p>
+          <p>Dentro ou fora de uma relação, sem depender de &ldquo;performar&rdquo; nada.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Processo -->
+  <!-- Processo em 3 movimentos -->
   <section class="section-dawn surface" id="processo">
     <div class="container">
-      <div class="process-layout">
-        <p class="pull-quote reveal">&ldquo;O foco pode ser simplesmente o toque, a conexão, o prazer em si. Sem checklist, sem cobrança.&rdquo;</p>
-        <div class="process-copy reveal">
-          <h2>Sem roteiro. Sem meta. Sem desempenho.</h2>
-          <p>Você não vai encontrar aqui um passo a passo de &ldquo;como ter orgasmos melhores&rdquo; ou técnicas de desempenho. O processo é o oposto disso.</p>
-          <p>Trabalhamos juntas pra desconstruir a ideia de que sexualidade precisa seguir um roteiro fixo — penetração, orgasmo, desempenho.</p>
-          <p>No primeiro encontro, uso ferramentas de reflexão profunda pra começar esse processo de ressignificação — no seu ritmo, no seu limite, sem julgamento.</p>
+      <div class="section-header reveal">
+        <span class="eyebrow eyebrow-dawn">como funciona</span>
+        <h2>Sem roteiro. Sem meta. Sem desempenho.</h2>
+        <p class="section-lede">Você não vai encontrar aqui um passo a passo de &ldquo;como ter orgasmos melhores&rdquo;. O processo é o oposto disso — três movimentos, no seu ritmo.</p>
+      </div>
+
+      <ol class="process-steps">
+        <li class="process-step reveal">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Acolhimento</h3>
+            <p>Falamos sobre onde você está agora — trauma, repressão, rotina ou simplesmente o tempo que passou. Sem pressa, sem julgamento.</p>
+          </div>
+        </li>
+        <li class="process-step reveal">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Exploração sensorial</h3>
+            <p>Uso ferramentas de reflexão profunda pra reconectar você com corpo, desejo e prazer — começando pelo sensorial, não pelo sexual.</p>
+          </div>
+        </li>
+        <li class="process-step reveal">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Ressignificação</h3>
+            <p>Desconstruímos juntas a ideia de que sexualidade precisa seguir um roteiro fixo — penetração, orgasmo, desempenho. O foco vira o toque, a conexão, o prazer em si.</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="pull-quote reveal">&ldquo;O foco pode ser simplesmente o toque, a conexão, o prazer em si. Sem checklist, sem cobrança.&rdquo;</p>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="section-dawn" id="sobre">
+    <div class="container">
+      <div class="sobre-layout reveal">
+        <div class="sobre-photo" aria-hidden="true">
+          <span>[foto da profissional]</span>
+        </div>
+        <div class="sobre-copy">
+          <span class="eyebrow eyebrow-dawn">quem conduz o processo</span>
+          <h2>Um espaço guiado com cuidado</h2>
+          <p><em>[PENDENTE — bio da profissional: formação, anos de experiência, abordagem. Placeholder abaixo até confirmação.]</em></p>
+          <p>Cada encontro é conduzido de forma individual, no ritmo de quem chega — sem roteiro fixo, sem pressa, com sigilo garantido do início ao fim.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Depoimento -->
+  <section class="section-dawn surface">
+    <div class="container">
+      <blockquote class="testimonial reveal">
+        <span class="glyph-quote glyph-quote-dawn" aria-hidden="true">&ldquo;</span>
+        <p><em>[PENDENTE — depoimento real de cliente, com autorização de uso. Placeholder mantido em itálico até substituição.]</em></p>
+        <footer>— nome da cliente, pendente de autorização</footer>
+      </blockquote>
     </div>
   </section>
 
   <!-- Objeções -->
-  <section class="section-dawn">
+  <section class="section-dawn" id="perguntas">
     <div class="container">
       <div class="section-header reveal">
+        <span class="eyebrow eyebrow-dawn">antes de decidir</span>
         <h2>Perguntas que você pode estar se fazendo</h2>
       </div>
-      <div class="faq-list reveal">
+      <div class="faq-grid reveal">
         <details class="faq-item">
           <summary>Isso é íntimo demais pra falar com alguém que eu não conheço.</summary>
           <p>O processo é acolhedor e sigiloso, feito pro seu ritmo — não existe pressa nem julgamento aqui.</p>
@@ -126,6 +216,10 @@
         <details class="faq-item">
           <summary>Vai ser sobre técnica e desempenho?</summary>
           <p>Não. O processo desconstrói justamente essa lógica. O foco é conexão e prazer, sem meta.</p>
+        </details>
+        <details class="faq-item">
+          <summary>É presencial ou online?</summary>
+          <p>Os dois — você escolhe o formato que fizer mais sentido pra você.</p>
         </details>
       </div>
     </div>
