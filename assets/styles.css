@@ -54,6 +54,25 @@ html { scroll-behavior: smooth; color-scheme: light; }
   .grain-overlay { opacity: 0.3; }
 }
 
+/* Barra de progresso de leitura — funcional, mostra quanto falta da página */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1000;
+  background: transparent;
+  pointer-events: none;
+}
+.scroll-progress-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--terracota), var(--dourado));
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -143,12 +162,25 @@ button:focus-visible {
 
 /* ---------- Header ---------- */
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 50;
   padding: var(--space-lg) 0;
+  background: transparent;
+  box-shadow: none;
+  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.site-header.is-scrolled {
+  padding: var(--space-sm) 0;
+  background: rgba(28, 17, 19, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+#como-funciona, #sobre, #perguntas, #contato, #beneficios {
+  scroll-margin-top: 88px;
 }
 .site-header .container {
   display: flex;
@@ -324,9 +356,22 @@ button:focus-visible {
 
 /* ---------- Transição dusk → dawn: sentidos despertando ---------- */
 .senses-transition {
+  position: relative;
   background: linear-gradient(to bottom, var(--dusk-bg-deep), var(--dawn-bg));
   padding: var(--space-3xl) 0;
   text-align: center;
+  overflow: hidden;
+}
+/* Camada de parallax sutil — reforça a "virada" dusk→dawn ao rolar */
+.senses-parallax {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  right: 0;
+  height: 140%;
+  background: radial-gradient(ellipse at 50% 30%, rgba(201, 161, 94, 0.16) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: -1;
 }
 .senses-transition .eyebrow {
   display: block;
@@ -384,6 +429,12 @@ button:focus-visible {
   border: 1px solid var(--dawn-border);
   border-radius: var(--radius-card);
   padding: var(--space-xl);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--terracota);
+  box-shadow: 0 12px 28px rgba(181, 86, 61, 0.14);
 }
 .benefit-card .icon {
   width: 32px;
@@ -401,26 +452,51 @@ button:focus-visible {
 }
 
 /* Processo em 3 movimentos — sequência real, numeração se justifica */
+.process-steps-wrap {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto var(--space-2xl);
+}
+/* Linha que "desenha" conforme rola — mostra progresso real da jornada */
+.process-line {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  bottom: 40px;
+  width: 2px;
+  background: var(--dawn-border);
+  z-index: -1;
+}
+@media (max-width: 640px) { .process-line { display: none; } }
+.process-line-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--dourado), var(--terracota));
+  transform: scaleY(0);
+  transform-origin: top;
+}
 .process-steps {
   list-style: none;
-  margin: 0 0 var(--space-2xl);
+  margin: 0;
   padding: 0;
   display: grid;
   gap: var(--space-2xl);
-  max-width: 800px;
-  margin-inline: auto;
 }
 .process-step {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 32px 1fr;
   gap: var(--space-lg);
   align-items: baseline;
+  position: relative;
 }
 .step-num {
   font-family: var(--font-display);
   font-size: 1.4rem;
   color: var(--dourado);
   font-weight: 600;
+}
+@media (max-width: 640px) {
+  .process-step { grid-template-columns: auto 1fr; }
 }
 .process-step h3 { margin-bottom: var(--space-sm); }
 .process-step p { color: var(--dawn-text-muted); }
@@ -460,6 +536,8 @@ button:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  /* escala extra dá margem pro parallax (main.js) sem revelar borda vazia */
+  transform: scale(1.15);
 }
 .sobre-copy p { color: var(--dawn-text-muted); }
 
@@ -536,18 +614,48 @@ button:focus-visible {
   transition: transform 0.2s ease;
 }
 .faq-item[open] summary::after { transform: rotate(45deg); }
-.faq-item p {
+
+/* Resposta em wrapper próprio pra animar altura suave via GSAP (main.js)
+   em vez do corte instantâneo do <details> nativo. [open] é fallback
+   se o JS não carregar. */
+.faq-answer {
+  overflow: hidden;
+  height: 0;
+}
+.faq-item[open] .faq-answer { height: auto; }
+.faq-answer p {
   padding-bottom: var(--space-lg);
   color: var(--dawn-text-muted);
   max-width: 58ch;
+  margin: 0;
 }
 
 /* CTA final */
 .final-cta {
+  position: relative;
   background: linear-gradient(135deg, var(--terracota) 0%, var(--terracota-deep) 100%);
   color: var(--dusk-text);
   text-align: center;
   padding: var(--space-3xl) 0;
+  overflow: hidden;
+}
+/* Glow que "respira" bem devagar — ecoa a vela do hero, fecha o ciclo visual */
+.final-cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 600px;
+  max-height: 600px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(201, 161, 94, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.final-cta .container {
+  position: relative;
+  z-index: 1;
 }
 .final-cta h2 { color: var(--dusk-text); margin-bottom: var(--space-md); }
 .final-cta p {
