@@ -51,18 +51,48 @@
         </div>
       </div>
       <div class="hero-art hero-in hero-in-art" aria-hidden="true">
-        <svg viewBox="0 0 200 280" class="flame-art">
+        <svg viewBox="0 0 220 320" class="candle-art">
           <defs>
             <linearGradient id="flameGradient" x1="0" y1="1" x2="0" y2="0">
               <stop offset="0%" stop-color="var(--terracota)"/>
               <stop offset="55%" stop-color="var(--terracota)"/>
               <stop offset="100%" stop-color="var(--dourado)"/>
             </linearGradient>
+            <linearGradient id="waxGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#F3E9DF"/>
+              <stop offset="100%" stop-color="#E4D5C8"/>
+            </linearGradient>
+            <radialGradient id="plateGradient" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="var(--dourado)" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="var(--dourado)" stop-opacity="0"/>
+            </radialGradient>
           </defs>
-          <path class="flame-outer" fill="url(#flameGradient)"
-            d="M100,20 C60,80 40,120 40,165 C40,210 66,240 100,240 C134,240 160,210 160,165 C160,120 140,80 100,20 Z"/>
-          <path class="flame-inner" fill="var(--dusk-bg-deep)" opacity="0.55"
-            d="M100,90 C80,125 70,150 70,175 C70,198 83,215 100,215 C117,215 130,198 130,175 C130,150 120,125 100,90 Z"/>
+
+          <!-- brasas ambiente (camada 3: fundo) -->
+          <circle class="ember ember-1" cx="70" cy="150" r="2.5" fill="var(--dourado)"/>
+          <circle class="ember ember-2" cx="150" cy="120" r="2" fill="var(--dourado)"/>
+          <circle class="ember ember-3" cx="95" cy="170" r="1.8" fill="var(--terracota)"/>
+
+          <!-- prato/base -->
+          <ellipse cx="110" cy="290" rx="70" ry="14" fill="url(#plateGradient)"/>
+          <ellipse cx="110" cy="286" rx="46" ry="9" fill="var(--dawn-border)" opacity="0.5"/>
+
+          <!-- vela (camada 2: objeto parado, dá contexto) -->
+          <path fill="url(#waxGradient)"
+            d="M82,120 C82,110 86,104 90,100 L130,100 C134,104 138,110 138,120 L140,270 C140,278 134,283 126,283 L94,283 C86,283 80,278 80,270 Z"/>
+          <ellipse cx="110" cy="100" rx="24" ry="6" fill="#FBF6F1"/>
+          <path d="M92,105 C96,112 90,118 96,124" stroke="#E4D5C8" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+          <!-- pavio -->
+          <line x1="110" y1="100" x2="110" y2="88" stroke="#4A3A2E" stroke-width="2" stroke-linecap="round"/>
+
+          <!-- chama (camada 1: primária, flicker) -->
+          <g class="flame-group">
+            <path class="flame-outer" fill="url(#flameGradient)"
+              d="M110,26 C86,58 74,80 74,102 C74,126 90,142 110,142 C130,142 146,126 146,102 C146,80 134,58 110,26 Z"/>
+            <path class="flame-inner" fill="var(--dusk-bg-deep)" opacity="0.55"
+              d="M110,66 C98,86 92,100 92,113 C92,124 100,133 110,133 C120,133 128,124 128,113 C128,100 122,86 110,66 Z"/>
+          </g>
         </svg>
       </div>
     </div>

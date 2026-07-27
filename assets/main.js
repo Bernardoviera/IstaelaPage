@@ -64,6 +64,21 @@
         delay: 0.3
       });
 
+      // ---------- Ambiente: brasas subindo (camada de fundo, assíncrona) ----------
+      gsap.utils.toArray('.ember').forEach(function (ember, i) {
+        var riseTl = gsap.timeline({ repeat: -1, delay: i * 1.1, repeatDelay: 0.4 });
+        riseTl
+          .set(ember, { y: 0, x: 0, opacity: 0 })
+          .to(ember, { opacity: 0.85, duration: 0.4, ease: 'sine.out' })
+          .to(ember, {
+            y: -60 - i * 15,
+            x: (i % 2 === 0 ? 1 : -1) * (10 + i * 4),
+            opacity: 0,
+            duration: 2.6 + i * 0.5,
+            ease: 'sine.in'
+          }, '<');
+      });
+
       // ---------- Sentidos despertando — cascata ao entrar em cena ----------
       gsap.from('.senses-list li', {
         opacity: 0,
