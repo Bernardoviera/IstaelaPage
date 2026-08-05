@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v5
-**Last updated:** 2026-07-31
+**Document version:** v6
+**Last updated:** 2026-08-05
 
 ## Product Overview
 **One-liner:** Istaela Santos, sexóloga — educação sexual segura para mulheres e famílias, incluindo apoio para conversar com os filhos sobre sexualidade.
@@ -90,7 +90,7 @@
 ## Proof Points
 **Metrics:** +800 eventos femininos realizados; +5.000 mulheres impactadas diretamente.
 **Customers:** Participante e palestrante no XIX CBSH (Congresso Brasileiro de Sexualidade Humana / Jornada Mineira de Sexologia, 2024, Belo Horizonte) — evento científico de referência na área.
-**Testimonials:** [PENDENTE — depoimento real de cliente]
+**Testimonials:** 1 depoimento real recebido via WhatsApp (encaminhado pela cliente), usado no site resumido/sem nome real ("Renata, 38 anos — nome alterado a pedido da cliente"). Conteúdo original fala de terapia sexual pessoal (o produto anterior, não o atual de educação familiar) — usada só a parte genérica (autoconhecimento, confiança, guia), evitando o trecho específico sobre vida sexual conjugal pra não confundir o posicionamento atual. Mais depoimentos (idealmente já no foco família/educação) ainda bem-vindos.
 **Formação (credenciais):**
 - Especialização em Sexologia
 - Especialização em Terapia Sexual
@@ -114,6 +114,7 @@
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v6 (2026-08-05) — Primeiro depoimento real inserido (resumido, nome alterado). Testimonials deixa de estar pendente em Proof Points.
 - v5 (2026-07-31) — Bio real, credenciais (6 formações/certificações) e números de autoridade (+800 eventos, +5.000 mulheres, presença no CBSH 2024) fornecidos pela profissional. Proof Points deixa de estar pendente. Fotos de congresso recebidas para curadoria (algumas aprovadas, uma rejeitada por mostrar produtos sexuais explícitos em quadro — contradiz posicionamento familiar).
 - v4 (2026-07-24) — Reposicionamento completo: produto deixa de ser "Reconexão e Sexualidade" (encontro íntimo pessoal) e passa a ser educação sexual com sexóloga para mulheres e famílias (apoio para conversar com filhos). Nome da profissional confirmado: Istaela Santos. Preço confirmado: R$180/sessão. Público, dor, diferenciação e voz todos reescritos para o novo foco.
 - v3 (2026-07-24) — Confirmado modelo de venda: sessão avulsa agora, pacotes futuramente. Copy/estrutura do site não deve travar em "sessão única" de forma que dificulte introduzir pacotes depois.
