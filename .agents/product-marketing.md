@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v4
-**Last updated:** 2026-07-24
+**Document version:** v5
+**Last updated:** 2026-07-31
 
 ## Product Overview
 **One-liner:** Istaela Santos, sexóloga — educação sexual segura para mulheres e famílias, incluindo apoio para conversar com os filhos sobre sexualidade.
@@ -51,7 +51,7 @@
 - Tom seguro, educativo, sem julgamento — nem clínico frio nem constrangedor
 **How we do it differently:** Sessão individual, adaptada ao que a pessoa/família precisa — não é conteúdo genérico, é orientação com profissional.
 **Why that's better:** Informação confiável de quem entende, não "achismo" de internet.
-**Why customers choose us:** [PENDENTE — depoimentos, anos de experiência, formação específica da Istaela]
+**Why customers choose us:** Formação sólida (ver Proof Points) + origem prática incomum — começou atendendo dúvidas reais de clientes numa loja de lingerie/produtos sensuais, não só na teoria.
 
 ## Objections
 | Objection | Response |
@@ -88,13 +88,23 @@
 **Personality:** Segura, confiável, acolhedora, presente, sem julgamento.
 
 ## Proof Points
-**Metrics:** [PENDENTE]
-**Customers:** [PENDENTE]
-**Testimonials:** [PENDENTE]
+**Metrics:** +800 eventos femininos realizados; +5.000 mulheres impactadas diretamente.
+**Customers:** Participante e palestrante no XIX CBSH (Congresso Brasileiro de Sexualidade Humana / Jornada Mineira de Sexologia, 2024, Belo Horizonte) — evento científico de referência na área.
+**Testimonials:** [PENDENTE — depoimento real de cliente]
+**Formação (credenciais):**
+- Especialização em Sexologia
+- Especialização em Terapia Sexual
+- Especialização em Comportamento Humano
+- Formação em Recursos Humanos
+- Certificação em Programação Neurolinguística (PNL)
+- Certificação em Prevenção à Pedofilia e Abuso Infantil — Academia de Polícia Civil
+**Origem/história:** Começou dentro de uma loja de lingerie e produtos sensuais — foi ali, ouvindo dúvidas reais de clientes, que percebeu que faltava conhecimento, não produto. É a origem prática (não só acadêmica) da autoridade dela.
 **Value themes:**
 | Theme | Proof |
 |-------|-------|
-| Autoridade profissional | Credencial "Sexóloga" no nome/bio |
+| Autoridade profissional | 6 formações/certificações + presença em congresso científico nacional (CBSH) |
+| Escala de experiência real | +800 eventos, +5.000 mulheres impactadas |
+| Segurança específica pra pais | Certificação em Prevenção à Pedofilia e Abuso Infantil (Academia de Polícia Civil) — relevante direto pro público de mães/pais |
 | Conversa em família mais segura | [PENDENTE — depoimento] |
 
 ## Goals
@@ -104,6 +114,7 @@
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v5 (2026-07-31) — Bio real, credenciais (6 formações/certificações) e números de autoridade (+800 eventos, +5.000 mulheres, presença no CBSH 2024) fornecidos pela profissional. Proof Points deixa de estar pendente. Fotos de congresso recebidas para curadoria (algumas aprovadas, uma rejeitada por mostrar produtos sexuais explícitos em quadro — contradiz posicionamento familiar).
 - v4 (2026-07-24) — Reposicionamento completo: produto deixa de ser "Reconexão e Sexualidade" (encontro íntimo pessoal) e passa a ser educação sexual com sexóloga para mulheres e famílias (apoio para conversar com filhos). Nome da profissional confirmado: Istaela Santos. Preço confirmado: R$180/sessão. Público, dor, diferenciação e voz todos reescritos para o novo foco.
 - v3 (2026-07-24) — Confirmado modelo de venda: sessão avulsa agora, pacotes futuramente. Copy/estrutura do site não deve travar em "sessão única" de forma que dificulte introduzir pacotes depois.
 - v2 (2026-07-24) — Confirmado modalidade (presencial + online); preço e CTA final seguem pendentes até usuário confirmar com a profissional.
