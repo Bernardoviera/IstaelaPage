@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v7
+**Document version:** v8
 **Last updated:** 2026-08-06
 
 ## Product Overview
@@ -9,6 +9,13 @@
 **Product category:** Educação sexual / orientação com sexóloga (autoridade profissional, não terapia genérica).
 **Product type:** Serviço — sessão individual com profissional. Modalidade: presencial OU online, cliente escolhe.
 **Business model:** Sessão avulsa R$180 (confirmado). Pacotes de sessões são plano futuro — copy/estrutura não deve travar em "sessão única" de um jeito que dificulte introduzir pacotes depois.
+
+**PENDENTE — fatos de negócio ainda não confirmados (não inventar, perguntar à Istaela):**
+- Duração da sessão
+- Cidade/local do atendimento presencial
+- Como funciona na prática o atendimento online (plataforma usada?)
+- Formas de pagamento aceitas
+- Política de cancelamento e reagendamento (prazo mínimo etc.)
 
 ## Target Audience
 **Target companies:** N/A (B2C).
@@ -114,6 +121,7 @@
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v8 (2026-08-06) — Duas dúvidas de FAQ resolvidas (sessão é com o responsável, não a criança; o que acontece após chamar no WhatsApp). Consolida em um só lugar os 5 fatos de negócio ainda pendentes (duração, cidade, funcionamento online, pagamento, cancelamento) — não inventados, aguardando resposta da Istaela.
 - v7 (2026-08-06) — Número de WhatsApp confirmado (+55 31 9788-0019), todos os CTAs "Agendar sessão" agora linkam direto pra lá. Corrigido bug real: páginas legais mostravam "[PENDENTE]" e referência a arquivo interno (.agents/product-marketing.md) publicamente — reescritas com texto real.
 - v6 (2026-08-05) — Primeiro depoimento real inserido (resumido, nome alterado). Testimonials deixa de estar pendente em Proof Points.
 - v5 (2026-07-31) — Bio real, credenciais (6 formações/certificações) e números de autoridade (+800 eventos, +5.000 mulheres, presença no CBSH 2024) fornecidos pela profissional. Proof Points deixa de estar pendente. Fotos de congresso recebidas para curadoria (algumas aprovadas, uma rejeitada por mostrar produtos sexuais explícitos em quadro — contradiz posicionamento familiar).
