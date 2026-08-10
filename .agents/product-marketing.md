@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v6
-**Last updated:** 2026-08-05
+**Document version:** v7
+**Last updated:** 2026-08-06
 
 ## Product Overview
 **One-liner:** Istaela Santos, sexóloga — educação sexual segura para mulheres e famílias, incluindo apoio para conversar com os filhos sobre sexualidade.
@@ -109,11 +109,12 @@
 
 ## Goals
 **Business goal:** Vender sessões avulsas (R$180) agora; evoluir para pacotes futuramente.
-**Conversion action:** [PENDENTE — WhatsApp, formulário ou agendamento direto; site atual usa placeholder "Fale comigo"]
+**Conversion action:** Clique direto pro WhatsApp (+55 31 9788-0019) em todos os CTAs "Agendar sessão" — confirmado, não é mais placeholder.
 **Current metrics:** N/A (novo projeto).
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v7 (2026-08-06) — Número de WhatsApp confirmado (+55 31 9788-0019), todos os CTAs "Agendar sessão" agora linkam direto pra lá. Corrigido bug real: páginas legais mostravam "[PENDENTE]" e referência a arquivo interno (.agents/product-marketing.md) publicamente — reescritas com texto real.
 - v6 (2026-08-05) — Primeiro depoimento real inserido (resumido, nome alterado). Testimonials deixa de estar pendente em Proof Points.
 - v5 (2026-07-31) — Bio real, credenciais (6 formações/certificações) e números de autoridade (+800 eventos, +5.000 mulheres, presença no CBSH 2024) fornecidos pela profissional. Proof Points deixa de estar pendente. Fotos de congresso recebidas para curadoria (algumas aprovadas, uma rejeitada por mostrar produtos sexuais explícitos em quadro — contradiz posicionamento familiar).
 - v4 (2026-07-24) — Reposicionamento completo: produto deixa de ser "Reconexão e Sexualidade" (encontro íntimo pessoal) e passa a ser educação sexual com sexóloga para mulheres e famílias (apoio para conversar com filhos). Nome da profissional confirmado: Istaela Santos. Preço confirmado: R$180/sessão. Público, dor, diferenciação e voz todos reescritos para o novo foco.
