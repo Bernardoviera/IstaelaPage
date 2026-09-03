@@ -56,6 +56,14 @@
     navObserver.observe(heroEl);
   }
 
+  // ---------- Meta Pixel: evento Lead ao clicar em qualquer CTA de WhatsApp
+  // (funciona sem GSAP; não bloqueia a navegação pro wa.me) ----------
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof fbq === 'function') fbq('track', 'Lead');
+    });
+  });
+
   // Se o GSAP não carregou (CDN/arquivo bloqueado), conteúdo já está
   // visível por padrão no CSS — degrada bem, sem quebrar a página.
   if (typeof gsap === 'undefined') return;
