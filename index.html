@@ -87,25 +87,20 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
             </radialGradient>
           </defs>
 
-          <!-- brasas ambiente (camada 3: fundo) -->
           <circle class="ember ember-1" cx="70" cy="150" r="2.5" fill="var(--dourado)"/>
           <circle class="ember ember-2" cx="150" cy="120" r="2" fill="var(--dourado)"/>
           <circle class="ember ember-3" cx="95" cy="170" r="1.8" fill="var(--terracota)"/>
 
-          <!-- prato/base -->
           <ellipse cx="110" cy="290" rx="70" ry="14" fill="url(#plateGradient)"/>
           <ellipse cx="110" cy="286" rx="46" ry="9" fill="var(--dawn-border)" opacity="0.5"/>
 
-          <!-- vela (camada 2: objeto parado, dá contexto) -->
           <path fill="url(#waxGradient)"
             d="M82,120 C82,110 86,104 90,100 L130,100 C134,104 138,110 138,120 L140,270 C140,278 134,283 126,283 L94,283 C86,283 80,278 80,270 Z"/>
           <ellipse cx="110" cy="100" rx="24" ry="6" fill="#FBF6F1"/>
           <path d="M92,105 C96,112 90,118 96,124" stroke="#E4D5C8" stroke-width="1.5" fill="none" opacity="0.6"/>
 
-          <!-- pavio -->
           <line x1="110" y1="100" x2="110" y2="88" stroke="#4A3A2E" stroke-width="2" stroke-linecap="round"/>
 
-          <!-- chama (camada 1: primária, flicker) -->
           <g class="flame-group">
             <path class="flame-outer" fill="url(#flameGradient)"
               d="M110,26 C86,58 74,80 74,102 C74,126 90,142 110,142 C130,142 146,126 146,102 C146,80 134,58 110,26 Z"/>
@@ -117,7 +112,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Dor -->
   <section class="section-dusk">
     <div class="container">
       <div class="dor-layout">
@@ -132,7 +126,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Transição: os dois públicos -->
   <section class="senses-transition">
     <div class="senses-parallax" aria-hidden="true"></div>
     <div class="container">
@@ -146,7 +139,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Benefícios -->
   <section class="section-dawn" id="beneficios">
     <div class="container">
       <div class="section-header reveal">
@@ -190,7 +182,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Como funciona -->
   <section class="section-dawn surface" id="como-funciona">
     <div class="container">
       <div class="section-header reveal">
@@ -230,7 +221,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Sobre -->
   <section class="section-dawn" id="sobre">
     <div class="container">
       <div class="sobre-layout reveal">
@@ -265,7 +255,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Presença em congressos e eventos -->
   <section class="section-dawn" id="eventos">
     <div class="container">
       <div class="section-header reveal">
@@ -302,7 +291,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Depoimento -->
   <section class="section-dawn surface">
     <div class="container">
       <blockquote class="testimonial reveal">
@@ -313,7 +301,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- Objeções -->
   <section class="section-dawn" id="perguntas">
     <div class="container">
       <div class="section-header reveal">
@@ -353,7 +340,6 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- CTA final -->
   <section class="final-cta" id="contato">
     <div class="final-cta-glow" aria-hidden="true"></div>
     <div class="container">
@@ -378,5 +364,18 @@ src="https://www.facebook.com/tr?id=1601767174631453&ev=PageView&noscript=1"
 <a class="btn btn-primary sticky-cta" href="https://wa.me/553197880019" target="_blank" rel="noopener">Agendar sessão</a>
 
 <script src="assets/main.js" defer></script>
+
+<!-- Meta Lead Event: dispara ao clicar em qualquer botão/link do WhatsApp -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
