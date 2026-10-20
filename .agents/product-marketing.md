@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v8
-**Last updated:** 2026-08-06
+**Document version:** v9
+**Last updated:** 2026-10-20
 
 ## Product Overview
 **One-liner:** Istaela Santos, sexóloga — educação sexual segura para mulheres e famílias, incluindo apoio para conversar com os filhos sobre sexualidade.
@@ -9,6 +9,9 @@
 **Product category:** Educação sexual / orientação com sexóloga (autoridade profissional, não terapia genérica).
 **Product type:** Serviço — sessão individual com profissional. Modalidade: presencial OU online, cliente escolhe.
 **Business model:** Sessão avulsa R$180 (confirmado). Pacotes de sessões são plano futuro — copy/estrutura não deve travar em "sessão única" de um jeito que dificulte introduzir pacotes depois.
+
+**Segunda oferta — Mentoria "Sexualidade na Essência" (página `/mentoria`):** mentoria online para mulheres que querem se reconectar com o prazer, superar bloqueios emocionais (culpa, vergonha, crenças limitantes, dependência emocional) e definir limites. Copy em `docs/copy-sexualidade-na-essencia.md`. Oferta distinta da sessão de educação sexual — público e promessa diferentes; as duas convivem no mesmo site, a home não foi reposicionada. Cuidados de copy: sem promessa de cura/resultado garantido, sem afirmar condição pessoal da leitora (Meta Ads), com aviso de que não substitui acompanhamento médico/psicológico.
+**PENDENTE (mentoria):** preço, nº e duração dos encontros, individual ou grupo, formas de pagamento/cancelamento, nome do método, depoimentos de quem fez a mentoria. Hoje a página manda essas perguntas pro WhatsApp.
 
 **PENDENTE — fatos de negócio ainda não confirmados (não inventar, perguntar à Istaela):**
 - Duração da sessão
@@ -121,6 +124,7 @@
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v9 (2026-10-20) — Istaela enviou copy da mentoria "Sexualidade na Essência". Publicada como página separada `/mentoria` (home segue com educação sexual R$180), com copy revisada (sem promessas absolutas, sem afirmar condição da leitora, com aviso de escopo). Preço/duração/nº de encontros seguem pendentes — direcionados ao WhatsApp. Bio ganha "13 anos de atuação". Removido evento Lead duplicado do `main.js` (o script inline do `index.html` já dispara).
 - v8 (2026-08-06) — Duas dúvidas de FAQ resolvidas (sessão é com o responsável, não a criança; o que acontece após chamar no WhatsApp). Consolida em um só lugar os 5 fatos de negócio ainda pendentes (duração, cidade, funcionamento online, pagamento, cancelamento) — não inventados, aguardando resposta da Istaela.
 - v7 (2026-08-06) — Número de WhatsApp confirmado (+55 31 9788-0019), todos os CTAs "Agendar sessão" agora linkam direto pra lá. Corrigido bug real: páginas legais mostravam "[PENDENTE]" e referência a arquivo interno (.agents/product-marketing.md) publicamente — reescritas com texto real.
 - v6 (2026-08-05) — Primeiro depoimento real inserido (resumido, nome alterado). Testimonials deixa de estar pendente em Proof Points.

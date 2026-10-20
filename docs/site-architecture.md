@@ -7,6 +7,7 @@
 
 ```
 Homepage (/)
+├── Mentoria Sexualidade na Essência (/mentoria)   [landing própria, link no nav e footer da home]
 ├── Política de Privacidade (/politica-de-privacidade)
 ├── Termos de Compra (/termos-de-compra)
 └── Obrigado (/obrigado)          [pós-conversão, sem link em nav]
@@ -21,6 +22,7 @@ site raso (1 nível) é o correto pra oferta única de serviço.
 | Page | URL | Parent | Nav Location | Priority |
 |------|-----|--------|--------------|----------|
 | Homepage (oferta) | `/` | — | — | High |
+| Mentoria Sexualidade na Essência | `/mentoria` | Homepage | Nav (desktop) + Footer | High |
 | Política de Privacidade | `/politica-de-privacidade` | Homepage | Footer | Low |
 | Termos de Compra | `/termos-de-compra` | Homepage | Footer | Low |
 | Obrigado | `/obrigado` | Homepage | — (pós-CTA only) | Medium |
