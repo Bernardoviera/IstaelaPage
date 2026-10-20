@@ -822,6 +822,100 @@ button:focus-visible {
   .sticky-cta { display: block; }
 }
 
+/* ---------- Página /mentoria ---------- */
+a.wordmark { text-decoration: none; }
+#para-quem { scroll-margin-top: 88px; }
+
+/* Lista de identificação (seção dusk) */
+.identify-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg);
+  display: grid;
+  gap: var(--space-sm);
+  text-align: left;
+}
+.identify-list li {
+  position: relative;
+  padding-left: 22px;
+}
+.identify-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dourado);
+}
+.section-dusk .prose .closing {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--dusk-text);
+}
+
+/* "É pra você se" / "Antes de começar" */
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .fit-grid { grid-template-columns: 1fr; }
+}
+.fit-card {
+  background: var(--dawn-bg);
+  border: 1px solid var(--dawn-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-xl);
+}
+.fit-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-md);
+}
+.fit-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+.fit-card li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--dawn-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.fit-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dourado);
+}
+.fit-card-note li::before { background: var(--terracota); }
+
+/* Seção "como funciona" sem passos numerados */
+.como-body {
+  max-width: var(--measure);
+  margin: 0 auto;
+  text-align: center;
+  color: var(--dawn-text-muted);
+}
+.como-body p { margin-bottom: var(--space-md); }
+.section-cta {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+
 /* .reveal — animado via GSAP ScrollTrigger.batch (assets/main.js).
    Sem estado oculto em CSS: se o script falhar, conteúdo fica visível. */
 

@@ -56,14 +56,6 @@
     navObserver.observe(heroEl);
   }
 
-  // ---------- Meta Pixel: evento Lead ao clicar em qualquer CTA de WhatsApp
-  // (funciona sem GSAP; não bloqueia a navegação pro wa.me) ----------
-  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      if (typeof fbq === 'function') fbq('track', 'Lead');
-    });
-  });
-
   // Se o GSAP não carregou (CDN/arquivo bloqueado), conteúdo já está
   // visível por padrão no CSS — degrada bem, sem quebrar a página.
   if (typeof gsap === 'undefined') return;
@@ -92,7 +84,7 @@
         gsap.set('.hero-in, .reveal, .senses-list li, .testimonial .glyph-quote, .icon path, .icon circle, .icon line, .icon rect', {
           opacity: 1, y: 0, scale: 1, strokeDashoffset: 0
         });
-        gsap.set('.process-line-fill', { scaleY: 1 });
+        if (document.querySelector('.process-line-fill')) gsap.set('.process-line-fill', { scaleY: 1 });
         return;
       }
 
@@ -193,10 +185,12 @@
       });
 
       // ---------- Linha do processo: desenha conforme rola (progresso real) ----------
-      gsap.to('.process-line-fill', {
-        scaleY: 1, ease: 'none',
-        scrollTrigger: { trigger: '.process-steps-wrap', start: 'top 70%', end: 'bottom 75%', scrub: 0.5 }
-      });
+      if (document.querySelector('.process-steps-wrap')) {
+        gsap.to('.process-line-fill', {
+          scaleY: 1, ease: 'none',
+          scrollTrigger: { trigger: '.process-steps-wrap', start: 'top 70%', end: 'bottom 75%', scrub: 0.5 }
+        });
+      }
 
       // ---------- Foto da Istaela: parallax sutil ----------
       var sobreImg = document.querySelector('.sobre-photo img');
